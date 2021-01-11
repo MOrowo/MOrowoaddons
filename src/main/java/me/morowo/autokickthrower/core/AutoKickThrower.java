@@ -3,6 +3,7 @@ package me.morowo.autokickthrower.core;
 import java.io.*;
 
 import me.morowo.autokickthrower.command.ThrowCommand;
+import me.morowo.autokickthrower.command.WarpCommand;
 import me.morowo.autokickthrower.config.GeneralConfig;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -40,6 +41,7 @@ public class AutoKickThrower
         MinecraftForge.EVENT_BUS.register(event);
 
         ClientCommandHandler.instance.registerCommand(new ThrowCommand());
+        ClientCommandHandler.instance.registerCommand(new WarpCommand());
     }
 
 }
