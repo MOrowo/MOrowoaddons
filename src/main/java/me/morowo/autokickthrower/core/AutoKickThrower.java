@@ -31,8 +31,7 @@ public class AutoKickThrower
     @EventHandler
     public void preInit(FMLPreInitializationEvent event)
     {
-        GeneralConfig.init(new File(event.getModConfigurationDirectory(), "autokickthrower.cfg"));
-
+        GeneralConfig.init(new File(event.getSuggestedConfigurationFile(), "autokickthrower.cfg"));
     }
 
     @EventHandler

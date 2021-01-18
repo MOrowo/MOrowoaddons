@@ -50,6 +50,9 @@ public class WarpCommand extends CommandBase {
                 case "dung":
                     args[0] = "dungeon_hub";
                     break;
+                case "jerry":
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/savethejerrys");
+                    break;
             }
         }
         Minecraft.getMinecraft().thePlayer.sendChatMessage("/warp" + " " + args[0]);
