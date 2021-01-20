@@ -4,6 +4,7 @@ import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.CommandException;
 import net.minecraft.command.ICommandSender;
+import net.minecraft.command.WrongUsageException;
 import net.minecraft.util.BlockPos;
 
 import java.util.Collections;
@@ -42,6 +43,11 @@ public class WarpCommand extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender sender, String[] args) throws CommandException {
+
+        if (args.length < 1) {
+            throw new WrongUsageException("/warp <args>");
+        }
+
         if (args.length == 1) {
             switch (args[0].toLowerCase()) {
                 case "h":

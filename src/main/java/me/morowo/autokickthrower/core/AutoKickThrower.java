@@ -4,6 +4,7 @@ import java.io.*;
 
 import me.morowo.autokickthrower.command.ThrowCommand;
 import me.morowo.autokickthrower.command.WarpCommand;
+import me.morowo.autokickthrower.command.joinBedwarsCommand;
 import me.morowo.autokickthrower.config.GeneralConfig;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -41,6 +42,7 @@ public class AutoKickThrower
 
         ClientCommandHandler.instance.registerCommand(new ThrowCommand());
         ClientCommandHandler.instance.registerCommand(new WarpCommand());
+        ClientCommandHandler.instance.registerCommand(new joinBedwarsCommand());
     }
 
 }
