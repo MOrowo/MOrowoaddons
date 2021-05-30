@@ -1,4 +1,4 @@
-package me.morowo.autokickthrower.command;
+package me.morowo.MOrowoAddons.command;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
@@ -56,8 +56,14 @@ public class WarpCommand extends CommandBase {
                 case "dung":
                     args[0] = "dungeon_hub";
                     break;
+                case "f":
+                    args[0] = "desert";
+                    break;
                 case "jerry":
                     Minecraft.getMinecraft().thePlayer.sendChatMessage("/savethejerrys");
+                    break;
+                case "mine":
+                    Minecraft.getMinecraft().thePlayer.sendChatMessage("/warpforge");
                     break;
             }
         }
