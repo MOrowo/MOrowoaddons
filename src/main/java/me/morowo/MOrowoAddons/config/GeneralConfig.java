@@ -1,7 +1,7 @@
-package me.morowo.autokickthrower.config;
+package me.morowo.MOrowoAddons.config;
 
 import com.google.gson.*;
-import me.morowo.autokickthrower.core.AutoKickThrower;
+import me.morowo.MOrowoAddons.core.MOrowoAddons;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
@@ -14,13 +14,13 @@ public class GeneralConfig {
     public static final String MAIN_SETTINGS = "autokickthrower_main_settings";
     private static File file;
     private static Configuration config;
-    private final AutoKickThrower main;
+    private final MOrowoAddons main;
     private final File settingsConfigFile;
     private JsonObject settingsConfig = new JsonObject();
 
     public static String addPlayer;
 
-    public GeneralConfig(AutoKickThrower main, File settingsConfigFile) {
+    public GeneralConfig(MOrowoAddons main, File settingsConfigFile) {
         this.main = main;
         this.settingsConfigFile = settingsConfigFile;
     }
