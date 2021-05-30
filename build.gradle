@@ -21,8 +21,8 @@ plugins {
 }
 */
 version = "1.0"
-group= "me.morowo.autothrow" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "AutoThrower"
+group= "me.morowo.morowoaddons" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+archivesBaseName = "MOrowoAddons"
 
 
 sourceCompatibility = 1.8
