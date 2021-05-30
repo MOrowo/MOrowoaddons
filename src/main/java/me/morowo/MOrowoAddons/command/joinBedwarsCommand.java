@@ -1,4 +1,4 @@
-package me.morowo.autokickthrower.command;
+package me.morowo.MOrowoAddons.command;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.command.CommandBase;
@@ -14,7 +14,7 @@ public class joinBedwarsCommand extends CommandBase {
 
     @Override
     public String getCommandUsage(ICommandSender iCommandSender) {
-        return "/bw";
+        return "/bw <args>";
     }
 
     @Override
