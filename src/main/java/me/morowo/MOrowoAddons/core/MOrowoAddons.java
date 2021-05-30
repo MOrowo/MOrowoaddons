@@ -1,11 +1,11 @@
-package me.morowo.autokickthrower.core;
+package me.morowo.MOrowoAddons.core;
 
 import java.io.*;
 
-import me.morowo.autokickthrower.command.ThrowCommand;
-import me.morowo.autokickthrower.command.WarpCommand;
-import me.morowo.autokickthrower.command.joinBedwarsCommand;
-import me.morowo.autokickthrower.config.GeneralConfig;
+import me.morowo.MOrowoAddons.command.MOrowoCommand;
+import me.morowo.MOrowoAddons.command.WarpCommand;
+import me.morowo.MOrowoAddons.command.joinBedwarsCommand;
+import me.morowo.MOrowoAddons.config.GeneralConfig;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
@@ -16,16 +16,16 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 
-@Mod(modid = AutoKickThrower.MODID, version = AutoKickThrower.VERSION, clientSideOnly = true)
-public class AutoKickThrower
+@Mod(modid = MOrowoAddons.MODID, version = MOrowoAddons.VERSION, clientSideOnly = true)
+public class MOrowoAddons
 {
     public static final String MODID = "AutoThrower";
     public static final String VERSION = "1.0";
-    private static AutoKickThrower instance;
+    private static MOrowoAddons instance;
     private static final Logger LOGGER = LogManager.getLogger();
     private GeneralConfig Config;
 
-    public static AutoKickThrower getInstance() {
+    public static MOrowoAddons getInstance() {
         return instance;
     }
 
@@ -40,7 +40,7 @@ public class AutoKickThrower
     {
         MinecraftForge.EVENT_BUS.register(event);
 
-        ClientCommandHandler.instance.registerCommand(new ThrowCommand());
+        ClientCommandHandler.instance.registerCommand(new MOrowoCommand());
         ClientCommandHandler.instance.registerCommand(new WarpCommand());
         ClientCommandHandler.instance.registerCommand(new joinBedwarsCommand());
     }
