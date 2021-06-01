@@ -2,6 +2,7 @@ package me.morowo.MOrowoAddons.config;
 
 import com.google.gson.*;
 import me.morowo.MOrowoAddons.core.MOrowoAddons;
+import me.morowo.MOrowoAddons.utils.Category;
 import net.minecraftforge.common.config.Configuration;
 import net.minecraftforge.common.config.Property;
 
@@ -18,7 +19,7 @@ public class GeneralConfig {
     private final File settingsConfigFile;
     private JsonObject settingsConfig = new JsonObject();
 
-    public static String addPlayer;
+    public static String addChild;
 
     public GeneralConfig(MOrowoAddons main, File settingsConfigFile) {
         this.main = main;
@@ -31,15 +32,11 @@ public class GeneralConfig {
 
     }
 
-    private static List<String> addMainSetting()
-    {
-        Property prop;
-        List<String> propOrder = new ArrayList<String>();
-
-        prop = GeneralConfig.getProperty(GeneralConfig.MAIN_SETTINGS, "playerList:", "Poomy1234");
-        GeneralConfig.addPlayer = prop.getString();
+    private static List<String> addMainSetting() {
+        List<String> propOrder = new ArrayList();
+        Property prop = getProperty(Category.MAIN, "AutoParty:", true);
+        addChild = prop.getString();
         propOrder.add(prop.getName());
-
         return propOrder;
     }
 
@@ -61,19 +58,23 @@ public class GeneralConfig {
         }
     }
 
-    public static Property getProperty(String category, String name, boolean defaultValue)
-    {
-        return GeneralConfig.config.get(category, name, defaultValue);
+    public static Property getProperty(Category category, String name, boolean defaultValue) {
+        return config.get(category.getName(), name, defaultValue);
     }
 
-    public static Property getProperty(String category, String name, String defaultValue)
-    {
-        return GeneralConfig.config.get(category, name, defaultValue);
+    public static Property getProperty(Category category, String name, String defaultValue) {
+        return config.get(category.getName(), name, defaultValue);
     }
 
-    public static Configuration getConfig()
-    {
-        return GeneralConfig.config;
+    public static Configuration getConfig() {
+        return config;
     }
 
+    public static void setProperty(Category category, String name, boolean value) {
+        config.get(category.getName(), name, true).set(value);
+    }
+
+    public static void setProperty(Category category, String name, String value) {
+        config.get(category.getName(), name, true).set(value);
+    }
 }
