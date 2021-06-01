@@ -1,23 +1,21 @@
-# eclipse
-bin
-*.launch
+# folder
 .settings
+bin
+build
+eclipse
+libs
+run
+.idea
+
+# file
+!gradlew.bat
+*.bat
+*.launch
 .metadata
 .classpath
 .project
-
-# idea
-out
-*.ipr
-*.iws
-*.iml
-.idea
-
-# gradle
-build
-.gradle
-
-# other
-eclipse
-run
-README.txt
+LICENSE-fml.txt
+MinecraftForge-Credits.txt
+MinecraftForge-License.txt
+Paulscode IBXM Library License.txt
+Paulscode SoundSystem CodecIBXM License.txt
