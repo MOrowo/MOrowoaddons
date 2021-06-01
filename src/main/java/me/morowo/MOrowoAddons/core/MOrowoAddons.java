@@ -4,7 +4,7 @@ import java.io.*;
 
 import me.morowo.MOrowoAddons.command.MOrowoCommand;
 import me.morowo.MOrowoAddons.command.WarpCommand;
-import me.morowo.MOrowoAddons.command.joinBedwarsCommand;
+import me.morowo.MOrowoAddons.command.JoinBedwarsCommand;
 import me.morowo.MOrowoAddons.config.GeneralConfig;
 import net.minecraftforge.client.ClientCommandHandler;
 import net.minecraftforge.common.MinecraftForge;
@@ -42,7 +42,7 @@ public class MOrowoAddons
 
         ClientCommandHandler.instance.registerCommand(new MOrowoCommand());
         ClientCommandHandler.instance.registerCommand(new WarpCommand());
-        ClientCommandHandler.instance.registerCommand(new joinBedwarsCommand());
+        ClientCommandHandler.instance.registerCommand(new JoinBedwarsCommand());
     }
 
 }
